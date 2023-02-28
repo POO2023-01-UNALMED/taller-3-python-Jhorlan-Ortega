@@ -37,7 +37,7 @@ class TV:
 
     def setCanal(self, canal):
 
-        if canal >= 1 and canal <= 120 and self.estado:
+        if canal >= 1 and canal <= 120 and self._estado:
                 self._canal = canal
         else:
             pass
@@ -61,7 +61,7 @@ class TV:
 
     def canalUp(self):
         if self.estado == True and self._canal < 120:
-            self._canal += 1
+            self._canal = self.canal+1
 
     def canalDown(self):
         if self.estado == True and self._canal > 1:
